@@ -29,8 +29,8 @@
 
   <main>
     <section id="overview">
-      <h2>Overview</h2>
-      <p>This archive page collects notes, materials, and links for ongoing digital humanities work. Use the sections below to navigate the main themes and access associated resources.</p>
+      <h2>Intro</h2>
+      <p>This archive aims at documenting the Unity Intifada through a structured timeline, key actors, historical background, and curated references.</p>
     </section>
   </main>
   <footer id="contact">
@@ -47,6 +47,32 @@
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
+
+  var events = [
+  {
+    title: "Jerusalem protests",
+    coords: [31.7683, 35.2137],
+    description: "Protests in East Jerusalem during May 2021 escalation."
+  },
+  {
+    title: "Gaza airstrikes",
+    coords: [31.5, 34.47],
+    description: "Airstrikes reported across Gaza Strip."
+  },
+  {
+    title: "Lod unrest",
+    coords: [31.9514, 34.8953],
+    description: "Intercommunal violence and unrest in Lod."
+  }
+  ];
+
+  events.forEach(function (event) {
+  L.marker(event.coords)
+    .addTo(map)
+    .bindPopup(
+      "<strong>" + event.title + "</strong><br>" + event.description
+    );
+  });
   </script>
      
 </body>

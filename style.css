@@ -95,7 +95,7 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(37,99,235,.1);
+  background: rgba(153, 51, 0, 0.15);
 }
 
 nav {

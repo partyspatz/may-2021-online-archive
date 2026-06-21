@@ -99,65 +99,50 @@ nav a:hover {
 }
 
 #timeline-container {
-  --timeline-x: 20px;
+  --timeline-line-x: 24px;
+  --timeline-color: #993300;
 
   position: relative;
   margin-top: 2rem;
   margin-left: 3rem;
-  padding-left: 4rem;
+  padding-left: 0;
 }
 
 #timeline-container::before {
   content: "";
   position: absolute;
-
-  left: var(--timeline-x);
+  left: var(--timeline-line-x);
   top: 0;
   bottom: 0;
-
   width: 3px;
-  background: #993300;
+  background: var(--timeline-color);
 }
 
 .timeline-item {
   position: relative;
   margin-bottom: 3rem;
+  padding-left: 4.5rem;
 }
 
 .timeline-item::before {
   content: "";
-
   position: absolute;
+  left: var(--timeline-line-x);
+  top: 0.45rem;
 
-  left: calc(-4rem + var(--timeline-x) - 10px);
-  top: 2px;
+  width: 22px;
+  height: 22px;
 
-  width: 20px;
-  height: 20px;
-
-  background: #993300;
+  background: var(--timeline-color);
   border-radius: 50%;
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transform: translateX(-50%);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .timeline-item:hover::before {
-  transform: scale(2);
-  box-shadow: 0 0 0 6px rgba(153, 51, 0, 0.15);
-}
-
-.timeline-date {
-  font-family: "Elephant", serif;
-  color: #993300;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.timeline-text {
-  max-width: 70ch;
-  line-height: 1.7;
+  transform: translateX(-50%) scale(2);
+  box-shadow: 0 0 0 7px rgba(153, 51, 0, 0.15);
 }
 
 nav {

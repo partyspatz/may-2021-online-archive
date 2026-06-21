@@ -114,11 +114,6 @@ section {
   padding: 3rem 0;
 }
 
-.section--surface {
-  background: var(--surface);
-  padding: 3rem 1.5rem;
-}
-
 section + section {
   border-top: 1px solid var(--border);
 }

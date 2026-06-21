@@ -212,6 +212,10 @@ timelineData.forEach(item => {
   const el = document.createElement("div");
   el.className = "timeline-item";
 
+  const imageHtml = item.image
+    ? `<img src="${item.image}" alt="${item.date}" class="timeline-image">`
+    : "";
+
   const resourcesHtml = item.resources
     .map(resource => `<li><a href="${resource.url}" target="_blank">${resource.label}</a></li>`)
     .join("");

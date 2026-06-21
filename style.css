@@ -160,14 +160,6 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
-.timeline-image {
-  width: 100%;
-  max-width: 350px;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  display: block;
-}
-
 .timeline-text {
   line-height: 1.7;
 }
@@ -176,6 +168,22 @@ nav a:hover {
   max-width: 420px;
   font-size: 0.95rem;
   color: var(--muted);
+}
+
+.timeline-image {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+
+  margin-bottom: 1rem;
+
+  border-radius: 4px;
+
+  transition: transform 0.2s ease;
+}
+
+.timeline-image:hover {
+  transform: scale(1.02);
 }
 
 .timeline-resources strong {

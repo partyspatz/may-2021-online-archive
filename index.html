@@ -17,20 +17,30 @@
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
-    <div class="site-branding">
-      <h1>The May 2021 Events in Israel-Palestine</h1>
-      <p>An Online Archive</p>
-    </div>
-  </header>
+<body id="top">
+ <header>
+  <div class="header-content">
+    <a href="#top">
+      <img src="images/logo.png" alt="The May 2021 Online Archive" class="logo">
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <div id="map"></div>
 
   <main>
     <section id="overview">
       <h2>Intro</h2>
-      <p>This archive aims at documenting the Unity Intifada through a structured timeline, key actors, historical background, and curated references.</p>
+      <p>This archive aims at documenting the May 2021 events in Israel-Palestine through a structured timeline, key actors, historical background, and curated references.</p>
     </section>
   </main>
   <footer id="contact">
@@ -122,17 +132,11 @@
 ];
 
   events.forEach(function (event) {
-  L.circleMarker(event.coords, {
-    radius: 8,
-    color: "#993300",       // Rand
-    fillColor: "#993300",   // Füllung
-    fillOpacity: 0.9,
-    weight: 2
-  })
-  .addTo(map)
-  .bindPopup(
-    "<strong>" + event.title + "</strong><br>" + event.description
-  );
+  L.marker(event.coords)
+    .addTo(map)
+    .bindPopup(
+      "<strong>" + event.title + "</strong><br>" + event.description
+    );
 });
   </script>
      

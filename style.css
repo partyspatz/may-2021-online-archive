@@ -1,6 +1,6 @@
 /* Research website base styles */
 :root {
-  --bg: #f5f7fb;
+  --bg: #ffffff;
   --surface: #ffffff;
   --surface-strong: #edf2f7;
   --text: #1f2937;
@@ -101,7 +101,8 @@ nav a:hover {
 #timeline-container {
   position: relative;
   margin-top: 2rem;
-  padding-left: 2rem;
+  margin-left: 3rem;
+  padding-left: 3rem;
 }
 
 /* der Haupt-Strich */
@@ -126,19 +127,24 @@ nav a:hover {
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -2px;
-  top: 6px;
-  width: 12px;
-  height: 12px;
+  left: -29px;
+  top: 4px;
+
+  width: 16px;
+  height: 16px;
+
   background: #993300;
   border-radius: 50%;
+
+  transition: transform 0.2s ease;
 }
 
 /* Datum */
 .timeline-date {
-  font-weight: 600;
   font-family: "Elephant", serif;
   color: #993300;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
 }
 
 /* Text */
@@ -146,6 +152,10 @@ nav a:hover {
   margin-top: 0.3rem;
   color: var(--text);
   max-width: 70ch;
+}
+
+.timeline-item:hover::before {
+  transform: scale(1.4);
 }
 
 nav {

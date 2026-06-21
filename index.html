@@ -50,29 +50,90 @@
 
   var events = [
   {
-    title: "Jerusalem protests",
-    coords: [31.7683, 35.2137],
-    description: "Protests in East Jerusalem during May 2021 escalation."
+    title: "Sheikh Jarrah (Shimon HaTzadik)",
+    coords: [31.7833, 35.2365],
+    description: "Protests against the planned eviction of Palestinian families from Sheikh Jarrah."
   },
   {
-    title: "Gaza airstrikes",
-    coords: [31.5, 34.47],
-    description: "Airstrikes reported across Gaza Strip."
+    title: "Al-Aqsa Mosque Compound",
+    coords: [31.7767, 35.2354],
+    description: "Clashes between Israeli police and Palestinian worshippers during Ramadan."
   },
   {
-    title: "Lod unrest",
-    coords: [31.9514, 34.8953],
-    description: "Intercommunal violence and unrest in Lod."
+    title: "Gaza City",
+    coords: [31.5017, 34.4668],
+    description: "Israeli airstrikes and rocket fire during the May 2021 escalation."
+  },
+  {
+    title: "Lod (Lydda)",
+    coords: [31.9510, 34.8881],
+    description: "Severe intercommunal violence between Jewish and Palestinian citizens of Israel."
+  },
+  {
+    title: "Jaffa (Yafo)",
+    coords: [32.0500, 34.7522],
+    description: "Demonstrations, attacks on property and clashes during the unrest."
+  },
+  {
+    title: "Acre (Akko)",
+    coords: [32.9236, 35.0818],
+    description: "Violence, arson attacks and unrest in the mixed Jewish-Arab city."
+  },
+  {
+    title: "Haifa",
+    coords: [32.7940, 34.9896],
+    description: "Large demonstrations and protests in solidarity with Gaza and East Jerusalem."
+  },
+  {
+    title: "Ramallah",
+    coords: [31.9038, 35.2034],
+    description: "Mass protests and demonstrations across the West Bank."
+  },
+  {
+    title: "Hebron (Al-Khalil)",
+    coords: [31.5326, 35.0998],
+    description: "Clashes between Palestinian protesters and Israeli security forces."
+  },
+  {
+    title: "Nablus",
+    coords: [32.2211, 35.2544],
+    description: "Demonstrations and confrontations during the general strike."
+  },
+  {
+    title: "Bethlehem",
+    coords: [31.7054, 35.2024],
+    description: "Protests and clashes near checkpoints."
+  },
+  {
+    title: "Khan Younis",
+    coords: [31.3460, 34.3065],
+    description: "Heavy Israeli airstrikes in southern Gaza."
+  },
+  {
+    title: "Rafah",
+    coords: [31.2969, 34.2436],
+    description: "Airstrikes and civilian displacement in the southern Gaza Strip."
+  },
+  {
+    title: "Beit Hanoun",
+    coords: [31.5380, 34.5360],
+    description: "Israeli military operations and shelling near the northern Gaza border."
   }
-  ];
+];
 
   events.forEach(function (event) {
-  L.marker(event.coords)
-    .addTo(map)
-    .bindPopup(
-      "<strong>" + event.title + "</strong><br>" + event.description
-    );
-  });
+  L.circleMarker(event.coords, {
+    radius: 8,
+    color: "#993300",       // Rand
+    fillColor: "#993300",   // Füllung
+    fillOpacity: 0.9,
+    weight: 2
+  })
+  .addTo(map)
+  .bindPopup(
+    "<strong>" + event.title + "</strong><br>" + event.description
+  );
+});
   </script>
      
 </body>

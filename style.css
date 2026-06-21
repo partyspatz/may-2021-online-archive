@@ -95,7 +95,9 @@ nav a {
 }
 
 nav a:hover {
-  background: rgba(153, 51, 0, 0.15);
+  background: rgba(153, 51, 0, 0.12);
+  color: #993300;
+  box-shadow: 0 0 0 6px rgba(153, 51, 0, 0.12);
 }
 
 #timeline-container {

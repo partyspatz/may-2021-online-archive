@@ -43,6 +43,10 @@
       <h2>OVERVIEW</h2>
       <p>This archive aims at documenting the May 2021 events in Israel-Palestine through a structured timeline, key actors, historical background, and curated references.</p>
     </section>
+    <section id="timeline" class="section">
+      <h2>TIMELINE</h2>
+      <div id="timeline-container"></div>
+    </section>
   </main>
   <footer id="contact">
     <p>Archive maintained by Patricia Elisabeth Martin.</p>
@@ -138,6 +142,52 @@
     .bindPopup(
       "<strong>" + event.title + "</strong><br>" + event.description
     );
+});
+  </script>
+  <script>
+   const timelineData = [
+  {
+    date: "May 10, 2021",
+    text: "Israeli police entered the Al-Aqsa Mosque compound during heightened Jerusalem tensions. Hamas issued an ultimatum and later fired rockets toward Jerusalem; Israel began airstrikes on Gaza."
+  },
+  {
+    date: "May 11, 2021",
+    text: "Rocket fire from Gaza expanded toward Israeli cities including Ashkelon and Ashdod, while Israeli airstrikes on Gaza intensified."
+  },
+  {
+    date: "May 12, 2021",
+    text: "Violence spread inside mixed Jewish-Arab cities in Israel, especially Lod, alongside continued rocket fire and airstrikes."
+  },
+  {
+    date: "May 14, 2021",
+    text: "Israeli ground forces and artillery struck targets in Gaza from outside the territory; the escalation entered a heavier military phase."
+  },
+  {
+    date: "May 15, 2021",
+    text: "Israeli airstrikes destroyed the al-Jalaa tower in Gaza, which housed international media offices including Associated Press and Al Jazeera."
+  },
+  {
+    date: "May 18, 2021",
+    text: "A general strike was held by Palestinians across Israel, the occupied territories, and Gaza, while diplomatic pressure for a ceasefire increased."
+  },
+  {
+    date: "May 20-21, 2021",
+    text: "Israel and Hamas agreed to an Egyptian-brokered ceasefire, which came into effect at 2:00 a.m. on May 21."
+  }
+]; 
+
+const container = document.getElementById("timeline-container");
+
+timelineData.forEach(item => {
+  const el = document.createElement("div");
+  el.className = "timeline-item";
+
+  el.innerHTML = `
+    <div class="timeline-date">${item.date}</div>
+    <div class="timeline-text">${item.text}</div>
+  `;
+
+  container.appendChild(el);
 });
   </script>
      

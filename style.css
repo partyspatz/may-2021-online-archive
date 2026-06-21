@@ -87,17 +87,17 @@ nav ul {
 }
 
 nav a {
+  position: relative;
   color: var(--text);
   text-decoration: none;
   padding: 0.5rem 0.8rem;
   border-radius: 999px;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
 }
 
 nav a:hover {
   background: rgba(153, 51, 0, 0.12);
   color: #993300;
-  box-shadow: 0 0 0 6px rgba(153, 51, 0, 0.12);
 }
 
 #timeline-container {

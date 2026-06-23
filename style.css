@@ -132,7 +132,7 @@ nav a:hover::before {
 }
 
 .overview-section {
-  background-color: #36563C;
+  background-color: #A5947D;
   color: white;
   text-align: center;
 }
@@ -149,7 +149,25 @@ nav a:hover::before {
 .overview-text-box p {
   font-size: 1.05rem;
   line-height: 1.8;
-  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.explore-button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: #993300;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid #993300;
+}
+
+.explore-button:hover {
+  background-color: transparent;
+  color: #993300;
 }
 
 #timeline-container {

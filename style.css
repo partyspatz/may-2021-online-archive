@@ -131,6 +131,27 @@ nav a:hover::before {
   box-shadow: 0 0 0 7px rgba(153, 51, 0, 0.15);
 }
 
+.overview-section {
+  background-color: #36563C;
+  color: white;
+  text-align: center;
+}
+
+.overview-section h2 {
+  color: white;
+}
+
+.overview-text-box {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.overview-text-box p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
 #timeline-container {
   --timeline-color: #993300;
 

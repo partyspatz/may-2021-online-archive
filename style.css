@@ -382,11 +382,11 @@ nav a:hover::before {
   font-size: 1.2rem;
 }
 
-.prev {
+.carousel-prev {
   left: -60px;
 }
 
-.next {
+.carousel-next {
   right: -60px;
 }
 

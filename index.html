@@ -56,8 +56,7 @@
       <h2>BACKGROUND: SHEIKH JARRAH</h2>
 
      <div class="carousel-container">
-
-      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn carousel-prev">&#10094;</button>
 
       <div class="carousel-track">
 
@@ -103,7 +102,7 @@
 
     </div>
 
-    <button class="carousel-btn next">&#10095;</button>
+    <button class="carousel-btn carousel-next">&#10095;</button>
 
     </div>
   </section>
@@ -299,9 +298,10 @@ timelineData.forEach(item => {
 });
   </script>
   <script>
-  const slides = document.querySelectorAll(".slide");
-  const nextBtn = document.querySelector(".next");
-  const prevBtn = document.querySelector(".prev");
+  const carousel = document.querySelector(".carousel-container");
+  const slides = carousel.querySelectorAll(".slide");
+  const nextBtn = carousel.querySelector(".carousel-next");
+  const prevBtn = carousel.querySelector(".carousel-prev");
 
   let currentSlide = 0;
 
@@ -311,8 +311,8 @@ timelineData.forEach(item => {
   }
 
   nextBtn.addEventListener("click", () => {
-   currentSlide = (currentSlide + 1) % slides.length;
-   showSlide(currentSlide);
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
   });
 
   prevBtn.addEventListener("click", () => {
@@ -321,6 +321,6 @@ timelineData.forEach(item => {
   });
 
   showSlide(currentSlide);
-  </script>   
+</script>
 </body>
 </html>

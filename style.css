@@ -391,15 +391,15 @@ nav a:hover::before {
 }
 
 .carousel-image {
+  display: block;
+  
   width: 100%;
   max-width: 850px;
 
   height: 450px;
   object-fit: cover;
 
-  margin: 1.5rem auto;
-
-  display: block;
+  margin: 2rem auto;
 
   border-radius: 2px;
 

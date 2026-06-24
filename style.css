@@ -399,6 +399,8 @@ nav a:hover::before {
   height: 450px;
   object-fit: cover;
 
+  margin-left: auto;
+  margin-right: auto;
   margin: 2rem auto;
 
   border-radius: 2px;
@@ -429,6 +431,19 @@ section {
 
 section + section {
   border-top: 1px solid var(--border);
+}
+
+.slide h3 {
+  font-family: "Elephant", serif;
+  color: #993300;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  margin-bottom: 1.5rem;
+
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
 }
 
 footer {

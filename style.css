@@ -374,7 +374,7 @@ nav a:hover::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #B66A4D;
+  background: #993300;
   color: white;
   border: none;
   padding: 1rem;
@@ -388,6 +388,26 @@ nav a:hover::before {
 
 .carousel-next {
   right: -60px;
+}
+
+.carousel-image {
+  width: 100%;
+  max-width: 850px;
+
+  height: 450px;
+  object-fit: cover;
+
+  margin: 1.5rem auto;
+
+  display: block;
+
+  border-radius: 2px;
+
+  transition: transform 0.2s ease;
+}
+
+.carousel-image:hover {
+  transform: scale(1.01);
 }
 
 nav {

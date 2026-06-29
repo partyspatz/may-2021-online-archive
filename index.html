@@ -73,7 +73,7 @@
   <p>
     The 1948 Arab-Israeli War which led to the proclamation of the State of Israel transformed the status of Jerusalem and deeply affected Sheikh Jarrah. East Jerusalem came under Jordanian control, while many Palestinians lost homes elsewhere. In the 1950s, Palestinian refugee families were housed in Sheikh Jarrah through arrangements involving Jordan and UNRWA, making the neighborhood closely connected to the history of displacement.
   </p>
-  <img src="images/1948.jpg" alt="1948 war and displacement" class="carousel-image">
+  <img src="images/1948.png" alt="1948 war and displacement" class="carousel-image">
 </div>
 
 <div class="slide">
@@ -384,6 +384,23 @@
       { label: "Further reading", url: "#" }
     ]
   },
+ {
+  date: "MAY 13",
+  text: "Violence continues in Israel's mixed cities, particularly Lod. Organized Jewish nationalist groups arrive in the city amid ongoing unrest, while Israeli security forces maintain an expanded presence.",
+  tweet: `
+  <blockquote class="twitter-tweet" data-media-max-width="560">
+    <p lang="en" dir="ltr">
+      WATCH: During an emergency council meeting in Lod...
+    </p>
+    <a href="https://x.com/MiddleEastEye/status/1393040470801063941"></a>
+  </blockquote>
+  `,
+  resources: [
+    {label: "Middle East Eye",
+      url: "https://x.com/MiddleEastEye/status/1393040470801063941"
+    }
+  ]
+}
   {
     date: "MAY  14",
     text: "Israeli ground forces and artillery strike targets in Gaza from outside the territory; the escalation enters a heavier military phase.",
@@ -429,6 +446,10 @@ timelineData.forEach(item => {
     ? `<img src="${item.image}" alt="${item.date}" class="timeline-image">`
     : "";
 
+  const tweetHtml = item.tweet
+  ? `<div class="timeline-tweet">${item.tweet}</div>`
+  : "";
+
   const resourcesHtml = item.resources
     .map(resource => `<li><a href="${resource.url}" target="_blank">${resource.label}</a></li>`)
     .join("");
@@ -438,6 +459,7 @@ timelineData.forEach(item => {
     <div class="timeline-date">${item.date}</div>
     <div class="timeline-text">${item.text}</div>
     ${imageHtml}
+    ${tweetHtml}
   </div>
 
   <div class="timeline-resources">
@@ -476,5 +498,6 @@ timelineData.forEach(item => {
 
   showSlide(currentSlide);
 </script>
+<script async src="https://platform.x.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>

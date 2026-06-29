@@ -496,6 +496,80 @@ section + section {
   font-weight: 600;
 }
 
+.contact-section h2 {
+  font-family: "Elephant", serif;
+  color: #993300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem;
+  align-items: center;
+
+  max-width: 900px;
+  margin: 3rem auto 0;
+  padding: 2rem;
+
+  border: 1px solid var(--border);
+  background: white;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+}
+
+.contact-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.contact-info h3 {
+  font-family: "Elephant", serif;
+  color: #993300;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: normal;
+  margin: 0 0 1rem;
+}
+
+.contact-info p {
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+.contact-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-links a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #993300;
+  border-radius: 50%;
+
+  transition: 0.2s ease;
+}
+
+.contact-links a:hover {
+  background: #993300;
+  transform: translateY(-2px);
+}
+
+.contact-links img {
+  width: 20px;
+  height: 20px;
+}
+
 footer {
   padding: 2rem 1.5rem;
   text-align: center;

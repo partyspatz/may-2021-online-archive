@@ -433,6 +433,69 @@ section + section {
   text-align: center;
 }
 
+.resource-category {
+  margin-top: 3rem;
+}
+
+.resource-category h3 {
+  font-family: "Elephant", serif;
+  color: #993300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: normal;
+  margin-bottom: 1.5rem;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-card {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  background: white;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.resource-type {
+  display: inline-block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+
+.resource-card h4 {
+  font-family: "Elephant", serif;
+  color: #993300;
+  font-weight: normal;
+  margin: 0 0 0.8rem;
+}
+
+.resource-card p {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.resource-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #993300;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
 footer {
   padding: 2rem 1.5rem;
   text-align: center;

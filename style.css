@@ -594,3 +594,7 @@ footer {
 footer p {
   margin: 0.4rem 0 0;
 }
+
+.timeline-content .timeline-image {
+  margin-top: 3rem;
+}

@@ -498,7 +498,7 @@ section + section {
 
 .contact-section h2 {
   font-family: "Elephant", serif;
-  color: #993300;
+  color: var(--text);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: normal;
@@ -507,16 +507,11 @@ section + section {
 .contact-card {
   display: grid;
   grid-template-columns: 220px 1fr;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
 
   max-width: 900px;
   margin: 3rem auto 0;
-  padding: 2rem;
-
-  border: 1px solid var(--border);
-  background: white;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
 }
 
 .contact-photo {
@@ -524,6 +519,10 @@ section + section {
   height: 220px;
   object-fit: cover;
   border-radius: 50%;
+}
+
+.contact-info {
+  text-align: left;
 }
 
 .contact-info h3 {
@@ -566,8 +565,15 @@ section + section {
 }
 
 .contact-links img {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) saturate(100%)
+          invert(19%) sepia(63%) saturate(2500%)
+          hue-rotate(13deg) brightness(93%) contrast(103%);
+}
+
+.contact-links img[src*="linkedin"] {
+  width: 22px;
 }
 
 footer {

@@ -434,18 +434,18 @@ timelineData.forEach(item => {
     .join("");
 
   el.innerHTML = `
-    <div class="timeline-content">
-      <div class="timeline-date">${item.date}</div>
-      <div class="timeline-text">${item.text}</div>
-    </div>
+  <div class="timeline-content">
+    <div class="timeline-date">${item.date}</div>
+    <div class="timeline-text">${item.text}</div>
+    ${imageHtml}
+  </div>
 
-    <div class="timeline-resources">
-       ${imageHtml}
-      <strong>Resources</strong>
-      <ul>
-        ${resourcesHtml}
-      </ul>
-    </div>
+  <div class="timeline-resources">
+    <strong>Resources</strong>
+    <ul>
+      ${resourcesHtml}
+    </ul>
+  </div>
   `;
 
   container.appendChild(el);

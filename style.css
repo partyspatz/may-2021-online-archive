@@ -505,6 +505,28 @@ section + section {
   font-weight: 600;
 }
 
+.archive-closing {
+  padding: 5rem 0 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.closing-logo {
+  width: 220px;
+  height: auto;
+
+  opacity: 0.25;
+
+  transition: opacity 0.25s ease,
+              transform 0.25s ease;
+}
+
+.closing-logo:hover {
+  opacity: 0.55;
+  transform: scale(1.03);
+}
+
 .contact-section h2 {
   font-family: "Elephant", serif;
   color: var(--text);

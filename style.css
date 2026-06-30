@@ -409,9 +409,9 @@ nav a:hover::before {
 }
 
 .carousel-figure figcaption {
-  margin-top: 0.8rem;
+  margin-top: 1.2rem;
 
-  font-size: 0.82rem;
+  font-size: 0.6rem;
   color: rgba(0, 0, 0, 0.55);
 
   line-height: 1.5;

@@ -620,3 +620,7 @@ footer p {
 .timeline-content .timeline-image {
   margin-top: 3rem;
 }
+
+.archive-closing {
+  border-top: none !important;
+}

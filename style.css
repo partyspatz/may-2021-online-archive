@@ -301,13 +301,6 @@ nav a:hover::before {
   justify-self: end;
 }
 
-.timeline-item:nth-child(odd) .timeline-resources {
-  grid-column: 3;
-  justify-self: start;
-  align-self: start;
-  text-align: left;
-}
-
 .timeline-item:nth-child(odd) .timeline-resources li {
   padding-left: 18px;
 }
@@ -323,13 +316,6 @@ nav a:hover::before {
   grid-column: 3;
   text-align: left;
   justify-self: start;
-}
-
-.timeline-item:nth-child(even) .timeline-resources {
-  grid-column: 1;
-  justify-self: end;
-  align-self: start;
-  text-align: right;
 }
 
 .timeline-item:nth-child(even) .timeline-resources li {

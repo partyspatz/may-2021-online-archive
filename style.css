@@ -307,6 +307,8 @@ nav a:hover::before {
   grid-column: 3;
   justify-self: start;
   text-align: left;
+  align-self: start;
+  margin-top: 0;
 }
 
 .timeline-item:nth-child(odd) .timeline-resources li {
@@ -330,6 +332,8 @@ nav a:hover::before {
   grid-column: 1;
   justify-self: end;
   text-align: right;
+  align-self: start;
+  margin-top: 0;
 }
 
 .timeline-item:nth-child(even) .timeline-resources li {

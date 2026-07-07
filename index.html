@@ -547,20 +547,16 @@ timelineData.forEach(item => {
   el.innerHTML = `
   <div class="timeline-content">
     <div class="timeline-date">${item.date}</div>
-
-    <div class="timeline-text">
-      ${item.text}
-    </div>
-
-    <div class="timeline-resources">
-      <strong>Resources</strong>
-      <ul>
-        ${resourcesHtml}
-      </ul>
-    </div>
-
-    ${tweetHtml}
+    <div class="timeline-text">${item.text}</div>
     ${imageHtml}
+    ${tweetHtml}
+  </div>
+
+  <div class="timeline-resources">
+    <strong>Resources</strong>
+    <ul>
+      ${resourcesHtml}
+    </ul>
   </div>
 `;
 

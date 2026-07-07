@@ -273,6 +273,7 @@ nav a:hover::before {
 
 .timeline-resources ul {
   margin: 0;
+  margin-top: 0.6rem;
   padding-left: 1.2rem;
 }
 
@@ -290,6 +291,13 @@ nav a:hover::before {
 .timeline-item:nth-child(odd) .timeline-resources {
   grid-column: 3;
   justify-self: start;
+  align-self: start;
+  text-align: left;
+}
+
+.timeline-item:nth-child(odd) .timeline-resources ul {
+  padding-left: 1.2rem;
+  list-style-position: outside;
 }
 
 /* gerade: Ressourcen links, Text rechts */
@@ -302,12 +310,14 @@ nav a:hover::before {
 .timeline-item:nth-child(even) .timeline-resources {
   grid-column: 1;
   justify-self: end;
+  align-self: start;
   text-align: right;
 }
 
 .timeline-item:nth-child(even) .timeline-resources ul {
-  list-style-position: inside;
+  padding-right: 1.2rem;
   padding-left: 0;
+  list-style-position: inside;
 }
 
 /* mobile fallback */

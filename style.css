@@ -240,6 +240,8 @@ nav a:hover::before {
   max-width: 420px;
   font-size: 0.95rem;
   color: var(--muted);
+  align-self: start;
+  margin-top: 0.35rem;
 }
 
 .timeline-image {

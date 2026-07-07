@@ -310,11 +310,11 @@ nav a:hover::before {
 }
 
 .timeline-item:nth-child(odd) .timeline-resources li {
-  padding-right: 18px;
+  padding-left: 18px;
 }
 
 .timeline-item:nth-child(odd) .timeline-resources li::before {
-  right: 0;
+  left: 0;
 }
 
 /* ---------- EVEN ITEMS ---------- */
@@ -333,11 +333,11 @@ nav a:hover::before {
 }
 
 .timeline-item:nth-child(even) .timeline-resources li {
-  padding-left: 18px;
+  padding-right: 18px;
 }
 
 .timeline-item:nth-child(even) .timeline-resources li::before {
-  left: 0;
+  right: 0;
 }
 
 /* mobile fallback */

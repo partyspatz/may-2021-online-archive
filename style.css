@@ -272,16 +272,29 @@ nav a:hover::before {
 }
 
 .timeline-resources ul {
-  margin: 0;
-  margin-top: 0.6rem;
-  padding-left: 1.2rem;
+  margin: 0.6rem 0 0;
+  padding: 0;
 }
 
 .timeline-resources li {
-  margin-bottom: 0.35rem;
+  list-style: none;
+  position: relative;
+  margin-bottom: 0.6rem;
 }
 
-/* ungerade: Text links, Ressourcen rechts */
+.timeline-resources li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #993300;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.6em;
+}
+
+/* ---------- ODD ITEMS ---------- */
+/* Text links – Resources rechts */
+
 .timeline-item:nth-child(odd) .timeline-content {
   grid-column: 1;
   text-align: right;
@@ -295,12 +308,17 @@ nav a:hover::before {
   text-align: left;
 }
 
-.timeline-item:nth-child(odd) .timeline-resources ul {
-  padding-left: 1.2rem;
-  list-style-position: outside;
+.timeline-item:nth-child(odd) .timeline-resources li {
+  padding-left: 18px;
 }
 
-/* gerade: Ressourcen links, Text rechts */
+.timeline-item:nth-child(odd) .timeline-resources li::before {
+  left: 0;
+}
+
+/* ---------- EVEN ITEMS ---------- */
+/* Resources links – Text rechts */
+
 .timeline-item:nth-child(even) .timeline-content {
   grid-column: 3;
   text-align: left;
@@ -314,10 +332,12 @@ nav a:hover::before {
   text-align: right;
 }
 
-.timeline-item:nth-child(even) .timeline-resources ul {
-  padding-right: 1.2rem;
-  padding-left: 0;
-  list-style-position: inside;
+.timeline-item:nth-child(even) .timeline-resources li {
+  padding-right: 18px;
+}
+
+.timeline-item:nth-child(even) .timeline-resources li::before {
+  right: 0;
 }
 
 /* mobile fallback */

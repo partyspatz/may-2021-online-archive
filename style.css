@@ -345,6 +345,26 @@ nav a:hover::before {
   }
 }
 
+.timeline-figure {
+  margin: 2rem auto 0;
+}
+
+.timeline-figure figcaption {
+  margin-top: 0.8rem;
+
+  max-width: 420px;
+
+  font-size: 0.72rem;
+  line-height: 1.45;
+  font-style: italic;
+  color: rgba(0,0,0,.55);
+
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .carousel-container {
   position: relative;
   max-width: 900px;

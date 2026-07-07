@@ -477,10 +477,10 @@
   },
   {
     date: "MAY  12",
-    text: "Violence spreads inside mixed Jewish-Arab cities in Israel, especially Lod, alongside continued rocket fire and airstrikes. The Israeli Defense Forces target high-rise towers in Gaza City.",
+    text: "Violence spreads inside mixed Jewish-Arab cities in Israel, especially Lod, alongside continued rocket fire and airstrikes. In Gaza City, Israeli airstrikes destroy a high-rise building during Operation Guardian of the Walls.",
+    video: "https://commons.wikimedia.org/wiki/File:Operation_Guardian_of_the_Walls,_May_2021._XXIII.webm?embedplayer=true",
     resources: [
-      { label: "Video documentation", url: "#" },
-      { label: "Further reading", url: "#" }
+      { label: "IDF - Video documentation", url: "https://de.wikipedia.org/wiki/Datei:Operation_Guardian_of_the_Walls,_May_2021._XXIII.webm" }
     ]
   },
   {
@@ -562,11 +562,26 @@ timelineData.forEach(item => {
     .map(resource => `<li><a href="${resource.url}" target="_blank">${resource.label}</a></li>`)
     .join("");
 
+  const videoHtml = item.video
+  ? `
+    <div class="timeline-video-wrapper">
+      <iframe
+        src="${item.video}"
+        frameborder="0"
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  `
+  : "";
+
   el.innerHTML = `
   <div class="timeline-content">
     <div class="timeline-date">${item.date}</div>
     <div class="timeline-text">${item.text}</div>
     ${imageHtml}
+    ${videoHtml}
     ${tweetHtml}
   </div>
 

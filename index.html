@@ -465,8 +465,10 @@
   {
     date: "MAY  10",
     text: "Israeli police enters the Al-Aqsa Mosque compound during heightened Jerusalem tensions. Hamas issues an ultimatum and later fires rockets toward Jerusalem; Israel begins airstrikes on Gaza.",
-    image: "images/may11.png",
-    image: "images/may10.jpg",
+    images: [
+    "images/may11.png",
+    "images/may10.jpg"
+    ],
     resources: [
       { label: "News Report", url: "https://www.dailysabah.com/world/mid-east/israeli-police-injure-20-palestinians-at-jerusalems-al-aqsa-mosque" }
     ]
@@ -556,7 +558,17 @@ timelineData.forEach(item => {
   const el = document.createElement("div");
   el.className = "timeline-item";
 
-  const imageHtml = item.image
+  const imageHtml = item.images
+  ? item.images
+      .map(image => `
+        <img 
+          src="${image}" 
+          alt="${item.date}" 
+          class="timeline-image"
+        >
+      `)
+      .join("")
+  : item.image
     ? `<img src="${item.image}" alt="${item.date}" class="timeline-image">`
     : "";
 

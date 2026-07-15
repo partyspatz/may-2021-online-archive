@@ -529,7 +529,7 @@ section + section {
 }
 
 .resource-category {
-  margin-top: 1.25rem;
+  margin-top: 0.3rem;
   border-top: 1px solid var(--border);
 }
 
@@ -542,7 +542,7 @@ section + section {
   cursor: pointer;
   list-style: none;
 
-  padding: 1.4rem 3rem 1.4rem 0;
+  padding: 0.8rem 3rem 0.8rem 0;
 
   font-family: "Elephant", serif;
   color: #993300;

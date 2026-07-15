@@ -529,16 +529,67 @@ section + section {
 }
 
 .resource-category {
-  margin-top: 3rem;
+  margin-top: 1.25rem;
+  border-top: 1px solid var(--border);
 }
 
-.resource-category h3 {
+.resource-category:last-of-type {
+  border-bottom: 1px solid var(--border);
+}
+
+.resource-category summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+
+  padding: 1.4rem 3rem 1.4rem 0;
+
   font-family: "Elephant", serif;
   color: #993300;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  font-size: 1.15rem;
   font-weight: normal;
-  margin-bottom: 1.5rem;
+
+  transition: color 0.2s ease;
+}
+
+/* Standardpfeil in Chrome, Safari und Firefox ausblenden */
+.resource-category summary::-webkit-details-marker {
+  display: none;
+}
+
+.resource-category summary::marker {
+  content: "";
+}
+
+/* Eigener Plus-Pfeil */
+.resource-category summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-family: Inter, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #993300;
+
+  transition: transform 0.2s ease;
+}
+
+/* Im geöffneten Zustand wird aus + ein × */
+.resource-category[open] summary::after {
+  content: "-";
+}
+
+.resource-category summary:hover {
+  color: var(--text);
+}
+
+.resource-category .resource-grid {
+  padding: 0.5rem 0 2rem;
 }
 
 .resource-grid {
